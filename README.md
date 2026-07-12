@@ -39,6 +39,8 @@ Normalisation Journey:
 
  Key Design Decisions:
 
--A self-referencing foreign key is used in the Comment table (ParentCommentID) rather than creating a separate reply table. This avoids duplicating identical data  structures and keeps the schema clean while still supporting threaded comment replies.
--Categories are stored in a separate table rather than directly in the Content table to eliminate the transitive dependency VideoID → CategoryID → CategoryName. ---This was a key step in reaching Third Normal Form (3NF) and avoids repeating category names across multiple video records.
--The Follow table uses two foreign keys (FollowerID and FolloweeID) both referencing the same User table rather than creating separate Follower and Followee        tables. This avoids duplicating user data and correctly models the many-to-many relationship between users in a single junction table.
+-A self-referencing foreign key is used in the Comment table (ParentCommentID) rather than creating a separate reply table. This avoids duplicating identical data structures and keeps the schema clean while still supporting threaded comment replies.
+
+-Categories are stored in a separate table rather than directly in the Content table to eliminate the transitive dependency VideoID → CategoryID →CategoryName.This was a key step in reaching Third Normal Form (3NF) and avoids repeating category names across multiple video records.
+
+-The Follow table uses two foreign keys (FollowerID and FolloweeID) both referencing the same User table rather than creating separate Follower and Followee     tables. This avoids duplicating user data and correctly models the many-to-many relationship between users in a single junction table.
