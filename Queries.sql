@@ -1,5 +1,5 @@
 ------------------------------------------------
-Create Table scripts
+--Create Table scripts
 ------------------------------------------------
 -- 1. CATEGORIES_TBL	
 CREATE TABLE CATEGORIES_TBL (
@@ -148,7 +148,7 @@ CREATE TABLE COMMENTLIKES_TBL (
 );
  
 ------------------------------------------------------------
-Demonstrations:
+--Demonstrations:
 ------------------------------------------------------------
 
 1. Show all videos with their creator and category
