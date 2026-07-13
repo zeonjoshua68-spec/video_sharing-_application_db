@@ -1,5 +1,5 @@
 # video_sharing-_application_db
-Here's a clean GitHub description you can use:
+
 
 ---
 
